@@ -18,7 +18,7 @@ def main():
     browser = Browser(data_path=os.path.join(os.getcwd(), "data"))
     page = browser.get_page()
     page.get("https://pc.ctyun.cn")
-    page.listen.start('desk.ctyun.cn:8810/api/desktop/client/list') 
+    page.listen.start('desk.ctyun.cn:8810/api/desktop/client/pageDesktop')
     response = page.listen.wait(timeout=300)
     login_info = response._raw_body
     logger.info(f"登录信息: {response._raw_body}")
